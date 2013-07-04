@@ -1,13 +1,96 @@
-<head>
-  <title>Recommender Demo</title>
-</head>
-
+<head> <title>Recommender Demo #1</title> </head>
 <body>
-  {{> hello}}
-</body>
 
-<template name="hello">
-  <h1>Demo of a recommender fn.</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <span class="brand">Recommender Demo #1</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p class="text-info"><small>Friend data, time-desires, and basic probability are used to customize the types of activity recommendations featured.</small></p> 
+
+    <p class="well" id="report"></p>
+
+    <hr>
+
+    <h3>The data...</h3>
+
+<textarea id="example-data" style="width:90%; height: 200px">
+# relationship labels: crafty, smart, active, simple, sweet, crunk, unconventional
+# time desires are:  above + fresh_air
+
+---
+joe:
+    environment: urban
+    wants_hours: 
+        fresh_air: 8
+        sweet: 5
+        active: 3
+    friends: 
+        tristan: 
+            simple: [0.2, 0.4]
+            smart:  [0.4, 0.5]
+        phil:
+            unconventional:  [0.8, 0.8]
+            simple: [0.2, 0.5]
+        kimmai:
+            active: [0.5, 0.8]
+        kat:
+            sweet: [0.9, 0.9]
+
+
+tristan:
+    environment: urban
+    wants_hours: 
+        smart: 4
+        unconventional: 4
+        simple: 2
+    friends: 
+        joe: 
+            smart: [0.2, 0.4]
+            simple: [0.1, 0.3]
+        aza:
+            unconventional: [0.4, 0.6]
+            simple: [0.1, 0.1]
+        greg:
+            smart: [0.4, 0.7]
+            simple: [0.2, 0.3]
+        esme:
+            smart: [0.2, 0.2]
+            simple: [0.2, 0.6]
+
+
+kimmai:
+    environment: urban
+    wants_hours:
+        crunk: 14
+        crafty: 2
+        active: 2
+    friends:
+        joe:
+            active: [0.5, 0.6]
+            crunk: [0.1, 0.2]
+        jayson:
+            crunk: [0.8, 0.9]
+            active: [0.1, 0.3]
+        hang:
+            crafty: [0.8, 0.5]
+
+isolated_farmhand:
+    environment: rural
+    wants_hours:
+        smart: 8
+        crafty: 4
+    friends:
+        mom:
+            crafty: [0.1, 0.1]
+
+
+</textarea>
+
+</div>
+
+</body>

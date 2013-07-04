@@ -19,7 +19,7 @@ broad_likelihood =
 		unconventional: 0.1
 		fresh_air: 0.4
 	venue:
-		crafty: 0.5
+		crafty: 0.4
 		smart: 0.5
 		active: 0.4
 		simple: 0.05

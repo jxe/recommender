@@ -1,24 +1,26 @@
 <head> <title>Recommender Demo #1</title> </head>
 <body>
+<div class="container">
 
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
-            <span class="brand">Recommender Demo #1</span>
+    <div class="navbar navbar-static-top navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="brand">Recommender Demo #1</span>
+                <p class="navbar-text"> by <a href="http://nxhx.org">Joe Edelman</a> for <a href="http://timewellspent.github.io">The Foundation for Lives Well Lived</a></p>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <p class="text-info"><small>Friend data, time-desires, and basic probability are used to customize the types of activity recommendations featured.</small></p> 
+    <div class="page-header">
+      <h1>
+        <small>
+        Friend data, time-desires, and basic probability are used to customize the types of activity recommendations featured.
+        </small>
+      </h1>
+    </div>
 
-    <p class="well" id="report"></p>
-
-    <hr>
-
-    <h3>The data...</h3>
-
-<textarea id="example-data" style="width:90%; height: 200px">
+    <h3>Input</h3>
+<textarea id="example-data" style="width:98%;height: 160px; background-color:#ccc">
 # relationship labels: crafty, smart, active, simple, sweet, crunk, unconventional
 # time desires are:  above + fresh_air
 
@@ -90,6 +92,8 @@ isolated_farmhand:
 
 
 </textarea>
+
+    <h3>Output</h3><p class="well" id="report"></p>
 
     <p class="text-info"><small><a href="https://github.com/timewellspent/recommender">github.com/timewellspent/recommender</a></small></p> 
 
